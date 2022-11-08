@@ -7,9 +7,19 @@ export interface Post {
 }
 
 export const today: Post = {
-  id: '1',
-  title: 'Today',
-  created: DateTime.now().toISO()
-}
+  id: "1",
+  title: "Today",
+  created: DateTime.now().toISO(),
+};
 
-export const 
+export const thisWeek: Post = {
+  id: "2",
+  title: "This week",
+  created: DateTime.now().minus({ days: 5 }).toISO(),
+};
+
+export const thisMonth: Post = {
+  id: "3",
+  title: "This month",
+  created: DateTime.now().minus({ weeks: 3 }).toISO(),
+};
